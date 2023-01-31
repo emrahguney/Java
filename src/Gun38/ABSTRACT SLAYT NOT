@@ -1,0 +1,44 @@
+interitance + interface  = abstract class  gibi düşünülebilir
+
+Ortak özellikleri olan nesneleri modellemek için Java dilinde soyut sınflar kullanılır. Soyut sınıflardan interface sınıflarında olduğu gibi somut nesneler oluşturulamaz.
+Abstract class, ortak özellikleri olan nesneleri bir çatı altında toplamak için kullanılır,
+
+Abstract (Soyut) Sınıf Kuralları :
+-Sınıfın önüne “abstract” sözcüğü yazılarak soyutlaştırma işlemi yapılır. Abstract sınıftan kalıtım almak için de “extends” kullanılır.
+-Bir class sadece bir abstract class extends edebilir.
+-new anahtar sözcüğü ile nesneleri oluşturulamaz
+-İçerisinde değişken ve Abstract olan veya olmayan metodlar bulundurabilir
+-Abstract sınıflardan türetilen sınıfların abstract metodları implement etmesi zorunludur. Diğer metodları override etmeden de kullanabilir.
+-Constructors (yapıcı metodlar) bulundurabilirler.
+-Abstract classlar , java class ve interface lerden extend olabilir.
+
+************************************************************************
+
+Somut Class       Soyut(abstract) Class   Interface
+
+    tamamı dolu        kısmi dolu                metodlar bos
+    default const var  const olabilir            const olamaz
+    new yapılabilir    new olamaz                new olamaz
+    access modify var  access modify var         public-default
+    tamamen somut      kısmi somut               tamamen soyut
+
+   access modify=default ,public, private vb bunlara verilen isim
+   ---------------------------------------------------------------------------------------------------------------------
+   OOP :
+   Encapsulation : (Kapsülleme) private, get,set
+   Inheritance   : (Kalıtım) (extends) bir çok class ın ortak kısımları için
+   bir parent class yapıp , sonraki classları bu classdan
+   türetilmesine KALITIM demiştik. (dede-baba-torun ilşki)miras
+
+   polymorphism  :  (Çok şekillilik-şizofren) : bir parent class a veya ortak interface
+   sahip classların, istenildiğinde kendi tipinde, istenildiğinde parentin
+   tipinde olabilmesine, böylece aynı metodların kullanılmasına imkan vermesidir.
+   (kedi kopek)
+
+   Interface     :  birden çok class ın , aynı şablondan metodlarını üretmesini zorun kılan,
+   ve böylece yazılımı planlaştıran yöntemdi. Sadece metod isimlerinin olduğu
+   şablon.(toyotPirus)
+
+   Abstract      :  bir tane interface ve bir tane parent class olacaksa , interface+parent class
+   kullanma yerine, her ikisini içine alan tek bir class tipidir.
+   interface+Inheritance => abstract class -> 2 si birarada
